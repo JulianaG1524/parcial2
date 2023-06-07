@@ -9,8 +9,11 @@ const Books = () => {
     const [books, setBooks] = useState([]);
     const [selectedBook, setSelectedBook] = useState([]);
 
-    const clickDetail = (Book) => {
-        setSelectedBook(Book);
+    const clickDetail = (book) => {
+        const URL = `http://localhost:2000/books/${book.id}`
+        fetch(URL).then(data => data.json()).then(data => {
+            setSelectedBook(data);
+        })
     }
 
     useEffect(() => {
@@ -21,37 +24,18 @@ const Books = () => {
     }, [selectedBook]);
 
     return(
-        <div>
-            <Container>
-                <Row>
-                    <Col>
-                        <h1>Books</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Card>  
-                            <Card.Body>
-                                <Row>
-                                    {books.map((book) => (
-                                        <Col key={book.id}>
-                                            <Book book={book} onPress={clickDetail}/>
-                                        </Col>
-                                    ))}
-                                </Row>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card>
-                            <Card.Body>
-                                <BookDetail Book={selectedBook}/>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        <Container fluid >
+            <Row style={{margin: '20px'}}>
+                <Col className="col-8">
+                    {books.map((book) => (
+                        <Book book={book} onPress={clickDetail}/>
+                    ))}
+                </Col>
+                <Col className="col-4" >
+                    <BookDetail book={selectedBook}/>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

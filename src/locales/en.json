@@ -1,0 +1,19 @@
+{
+    "Logo": "LOGO",
+    "Log" : "Log in to your account",
+    "Username" : "Username",
+    "Password" : "Password",
+    "Login" : "Login",
+    "Cantlogin" : "Can't login?",
+    "Privacy" : "Privacy Policy Terms of Use",
+    "ISBN" : "ISBN",
+    "Author" : "Author",
+    "Publisher" : "Publisher",
+    "Genre" : "Genre",
+    "Year" : "Year",
+    "Available" : "Available Online",
+    "Yes" : "Yes",
+    "No" : "No",
+    "Price" : "Price",
+    "Summary" : "Summary"
+}

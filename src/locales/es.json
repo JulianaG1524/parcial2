@@ -1,0 +1,19 @@
+{
+    "Logo": "LOGO",
+    "Log" : "Inicie sesión en su cuenta",
+    "Username" : "Usuario",
+    "Password" : "Contraseña",
+    "Login" : "Iniciar Sesión",
+    "Cantlogin" : "¿No puedes iniciar sesión?",
+    "Privacy" : "Política de privacidad Condiciones de uso",
+    "ISBN" : "ISBN",
+    "Author" : "Autor",
+    "Publisher" : "Editorial",
+    "Genre" : "Género",
+    "Year" : "Año",
+    "Available" : "Disponible en línea",
+    "Yes" : "Sí",
+    "No" : "No",
+    "Price" : "Precio",
+    "Summary" : "Resumen"
+}
