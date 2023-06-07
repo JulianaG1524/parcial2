@@ -14,14 +14,6 @@ Para ejecutar este proyecto, sigue los pasos a continuación:
 
 # Proceso de desarrollo
 
-El proceso de desarrollo del proyecto se dividió en varias etapas:
-
-1. Página de inicio de sesión: Se creó un componente para la página de inicio de sesión, utilizando la librería Axios para realizar peticiones POST al backend y verificar las credenciales del usuario. En caso de que las credenciales sean inválidas, se muestra un mensaje de error.
-
-2. Componente Book: Se creó el componente Book, que forma parte de la página principal de la aplicación. Este componente se divide en dos secciones: la lista de libros y el detalle de un libro seleccionado. Se utilizó la librería Bootstrap para estilizar los componentes.
-
-3. Rutas y navegación: Se utilizó la librería react-router-dom para definir las rutas de la aplicación y facilitar la navegación entre las páginas de inicio de sesión y los libros. Esto se logró mediante el uso de los componentes BrowserRouter, Switch, Route y Link.
-
-4. Internacionalización: Se implementó la internacionalización utilizando la librería react-intl, lo que permite que la aplicación admita los idiomas inglés y español.
-
-5. Gestión del rol de usuario: Se utilizó el objeto sessionStorage para almacenar el rol del usuario que inicia sesión. Esto permite que la aplicación muestre los campos de texto relevantes en el detalle de un libro según el rol del usuario.
+El proceso de desarrollo inició con la pagina de Login para la cual solo se crea un componente que será la pagina completa debido a que no hay componentes más pequeños que se deban reutilizar, por otra parte se utiliza la librería axios para hacer las peticiones post al back con el fin de saber si el usuario tiene acceso o no a la aplicación, si el back devuelve un error mostramos un mensaje de error de credenciales invalidas.
+El siguiente gran componente que se crea y al que se accede luego de un login correcto es Book el cual está formado por 2 componentes más pequeños que son Book y BookDetail. Para el componente Books se utiliza una disposición dividida en 3 partes iguales donde la lista de libros conforma los primeros 2/3 y el detail el sobrante 1/3. Para la parte de la lista de libros se utiliza un componente nuevo que es una tarjeta de Bootstrap, se decide utilizar un componente aparte para cada libro porque de esta manera el código puede ser mantenible y cuando se deseen hacer ajustes solo a la tarjeta podemos dirigirnos directamente al componente, esto de manejar otro componente se hace también para el detail y también se utiliza un card de Bootstrap. De la misma manera que en el Login se usa la librería axios para hacer las peticiones, directamente al acceder a los libros se hace una petición al back para obtener la lista y de esta manera crear los componentes Book al lado izquierdo, al presionar uno de estos componentes se hace una nueva petición utilizando el id del libro seleccionado para ver el detail de este libro. 
+En el proyecto se hace uso de rutas de la librería react-router-dom para el acceso a los componentes de Login y Books, de esta manera también aseguramos que al iniciar la aplicación siempre se inicie con el Login y cuando este se haga exitosamente podamos acceder a los libros. Por otra parte, también utilizamos react-intl para la internacionalización soportando los idiomas inglés y español. Por último, se utiliza el sessionStorage para conocer el rol del usuario que inicia sesión y de esta manera saber como se mostrarán los campos de texto del Detail.
