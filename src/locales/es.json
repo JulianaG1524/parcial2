@@ -4,6 +4,7 @@
     "Username" : "Usuario",
     "Password" : "Contraseña",
     "Login" : "Iniciar Sesión",
+    "Invalid": "Usuario o contraseña inválidos",
     "Cantlogin" : "¿No puedes iniciar sesión?",
     "Privacy" : "Política de privacidad Condiciones de uso",
     "ISBN" : "ISBN",

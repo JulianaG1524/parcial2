@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Ejecución del proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para ejecutar este proyecto, sigue los pasos a continuación:
 
-## Available Scripts
+1. Haz un fork de este repositorio.
 
-In the project directory, you can run:
+2. Clona el repositorio en tu máquina local.
 
-### `npm start`
+3. Abre una terminal en la carpeta del proyecto y ejecuta el siguiente comando para instalar todas las dependencias: 'npm install'
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Asegúrate de que el backend esté en funcionamiento y tenga las CORS habilitadas en el puerto 2000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. Ejecuta el siguiente comando para iniciar la aplicación: 'npm start'. Esto abrirá la aplicación en tu navegador en la dirección http://localhost:3000.
 
-### `npm test`
+# Proceso de desarrollo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El proceso de desarrollo del proyecto se dividió en varias etapas:
 
-### `npm run build`
+1. Página de inicio de sesión: Se creó un componente para la página de inicio de sesión, utilizando la librería Axios para realizar peticiones POST al backend y verificar las credenciales del usuario. En caso de que las credenciales sean inválidas, se muestra un mensaje de error.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Componente Book: Se creó el componente Book, que forma parte de la página principal de la aplicación. Este componente se divide en dos secciones: la lista de libros y el detalle de un libro seleccionado. Se utilizó la librería Bootstrap para estilizar los componentes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Rutas y navegación: Se utilizó la librería react-router-dom para definir las rutas de la aplicación y facilitar la navegación entre las páginas de inicio de sesión y los libros. Esto se logró mediante el uso de los componentes BrowserRouter, Switch, Route y Link.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Internacionalización: Se implementó la internacionalización utilizando la librería react-intl, lo que permite que la aplicación admita los idiomas inglés y español.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Gestión del rol de usuario: Se utilizó el objeto sessionStorage para almacenar el rol del usuario que inicia sesión. Esto permite que la aplicación muestre los campos de texto relevantes en el detalle de un libro según el rol del usuario.

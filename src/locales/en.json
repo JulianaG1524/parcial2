@@ -4,6 +4,7 @@
     "Username" : "Username",
     "Password" : "Password",
     "Login" : "Login",
+    "Invalid": "Invalid username or password",
     "Cantlogin" : "Can't login?",
     "Privacy" : "Privacy Policy Terms of Use",
     "ISBN" : "ISBN",

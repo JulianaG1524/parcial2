@@ -129,7 +129,7 @@ return (
             <FormattedMessage id="Login"/>
           </button>
             {loginStatus === "Success" && navigate("/books")}
-            {loginStatus === "Error" && <div style={{textAlign: 'center', color: 'red', marginTop: '12px'}}>Invalid credentials</div>}
+            {loginStatus === "Error" && <div style={{textAlign: 'center', color: 'red', marginTop: '12px'}}><FormattedMessage id="Invalid"/></div>}
           </form>
         </div>
         <div 
